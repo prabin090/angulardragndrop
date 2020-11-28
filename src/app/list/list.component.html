@@ -1,0 +1,27 @@
+<label>{{listData.listname}}</label>
+<div cdkDropList #todoList="cdkDropList" [cdkDropListConnectedTo]="[doneList]" [cdkDropListData]="todo"
+    (cdkDropListDropped)="drag($event)">
+    <div *ngFor="let item of listData.listData" cdkDrag>
+        <app-card [cardData]="item"></app-card>
+    </div>
+    <div>
+        <label (click)="showCardEditor(todo)">Add New Card..</label>
+    </div>
+</div>
+<!-- <div class="cardEditor" *ngIf="showCardEditorDiv">
+    <div class="card editorCard">
+      <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" placeholder="Card Title" formControlName="cardtitle" class="form-control" />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Card Description" formControlName="carddescription" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="text" placehoder="Comment" formControlName="comment" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-submit">Create Card</button>
+      </form>
+    </div>
+  
+  </div> -->

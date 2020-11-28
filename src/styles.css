@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.css';
+.board {
+    min-height: 100vh;
+    display: flex;
+  }
+  
+  .column {
+    /* flex: 1; */
+    padding:20px;
+  }
+  
+  cdk-drop {
+    display: block;
+    min-height: 100vh;
+  }
+  
+  
+  .cdk-drop-dragging .cdk-drag {
+    transition: transform 500ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .cdk-drag-animating {
+    transition: transform 550ms cubic-bezier(0, 0, 0.2, 1);
+  
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+  .card{
+    width: 18rem;
+    height: 150px;
+    margin:5px
+  }
+.editorCard{
+    height: 250px;
+    width: 500px;
+    padding: 20px;
+  }
